@@ -1,7 +1,9 @@
 import os
+from venv import create
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
+import datetime
 
 load_dotenv()
 app = Flask(__name__)
@@ -33,3 +35,14 @@ def hobbies():
 def education():
     return render_template('education.html', title="MLH Fellow")
 
+class Timelinepost():
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        database = mydb
+
+mydb.connect()
+mydb.create_tables([Timelinepost])
