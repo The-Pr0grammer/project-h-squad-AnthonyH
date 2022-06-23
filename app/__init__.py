@@ -15,23 +15,27 @@ def index():
 
 @app.route('/aboutMe')
 def aboutMe():
-    return render_template('about_me.html', title="MLH Fellow")
+    return render_template('about_me.html', title="About Me")
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', title="MLH Fellow")
+    return render_template('experience.html', title="Experience")
 
 @app.route('/travel')
 def travel():
-    return render_template('travel.html', title="MLH Fellow")
+    return render_template('travel.html', title="My Travels")
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html', title="MLH Fellow")
+    return render_template('hobbies.html', title="Hobbies")
 
 @app.route('/education')
 def education():
-    return render_template('education.html', title="MLH Fellow")
+    return render_template('education.html', title="Edcaction")
+
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title='Timeline')
 
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
 print(mydb)
