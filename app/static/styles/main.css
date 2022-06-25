@@ -2,7 +2,7 @@ body {
   /* display: flex; */
   /* display: flex; */
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin: 0px;
 
@@ -10,15 +10,16 @@ body {
   background-color: #000000;
   background-size: cover;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+  overflow-y: scroll;
   font-family: "Roboto", serif;
 }
 
 .overlay {
   position: absolute;
   width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 101vh;
+  margin: 0px;
   padding: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.886);
@@ -394,6 +395,7 @@ li a:hover {
   height: 100%;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
   /* display: flex; */
 }
 
@@ -403,6 +405,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   float: right;
+  flex-direction: column;
   /* display: flex; */
 }
 
@@ -412,16 +415,16 @@ li a:hover {
 
   padding: 10% 5%;
   border-radius: 30px;
-  display: block;
+  /* display: block; */
   width: 500px;
   /* margin: auto; */
 
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 42.5%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 42.5%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
 }
 
 #form input[type="text"],
