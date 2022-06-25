@@ -410,34 +410,23 @@ li a:hover {
 }
 
 #form {
-  /* background: rgb(255, 128, 128); */
   background: #10a775;
-
-  padding: 10% 5%;
+  padding: 3% 3%;
   border-radius: 30px;
-  /* display: block; */
   width: 500px;
-  /* margin: auto; */
-
-  margin: 0;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 42.5%; */
-  /* -ms-transform: translateY(-50%); */
-  /* transform: translateY(-50%); */
+  margin: auto;
 }
 
-#form input[type="text"],
-#form input[type="email"],
-#form input[type="tel"] {
+#form input[type="text"] {
   background: #fff;
   border-radius: 30px;
   display: block;
   width: 100%;
-  padding: 13px;
+  padding: 2%;
   color: rgb(255, 128, 128);
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
+  /* height: 10vh; */
 }
 
 #form textarea {
@@ -445,11 +434,11 @@ li a:hover {
   border-radius: 30px;
   display: block;
   width: 100%;
-  padding: 13px;
+  padding: 2%;
   color: rgb(255, 128, 128);
   border: none;
-  margin-bottom: 10px;
-  height: 120px;
+  margin-bottom: 5%;
+  height: 12vh;
 }
 
 #form input[type="submit"] {
@@ -457,14 +446,25 @@ li a:hover {
   border: 3px solid #fff;
   border-radius: 30px;
   display: block;
-  width: 100%;
+  width: 20%;
   color: #fff;
-  padding: 14px;
+  padding: 1%;
+  margin: auto;
+}
+
+.postsh1 {
+  padding: 1%;
+  color: aquamarine;
+  margin: auto;
+  text-align: center;
+  /* background-color: yellow; */
 }
 
 #tl-posts {
-  min-width: 80vw;
+  width: 50vw;
+  max-width: 50vw;
   text-align: center;
+  margin: auto;
 
   font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
