@@ -69,6 +69,7 @@ body {
   max-width: 20vw;
   min-width: 20vw;
   padding: 35px 20px;
+  height: 12.5%;
 
   color: #10a775;
   font-weight: 700 !important;
@@ -484,14 +485,13 @@ td {
 
   height: 3.5rem;
   /* width: 16.5rem; */
-  
+
   width: 12.5rem;
   perspective: 70rem;
   opacity: 0.2;
   z-index: 1;
 
   /* background-color: rgb(255, 127, 221); */
-
 }
 .cover {
   background-color: #36354e;
@@ -767,7 +767,7 @@ h1 {
   height: 20vh;
   aspect-ratio: 1;
   object-fit: fill;
-  background: transparent
+  background: transparent;
   /* background-color: #4e2909; */
 }
 

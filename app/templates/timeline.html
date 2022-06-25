@@ -3,21 +3,98 @@
   <head>
     <!-- Required meta tags -->
     <title>My Portfolio</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta property="og:title" content="Personal Portfolio" />
     <meta property="og:description" content="My Personal Portfolio" />
     <meta property="og:url" content="{{ url }}" />
 
-    </head>
-    <body>
-      <!-- transparent black div to overlay the background -->
-      <div class="overlay">
-        <h1>ieuqciwuciueciueciqbeiuceuce</h1>
-      </div>
-      <!-- transparent black div to overlay the background -->
-    </body>
+    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+  </head>
+  <!-- transparent black div to overlay the background -->
+  <div class="overlay"></div>
+  <!-- transparent black div to overlay the background -->
+
+  <div class="tl-div"></div>
+  <!-- menu_bar -->
+  <header class="nav-bar">
+    <ul class="nav-content">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutMe">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/hobbies">Hobbies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/travel">My Travels</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          style="color: rgba(255, 255, 255, 0.55)"
+          href="/timeline"
+          >Timeline</a
+        >
+      </li>
+    </ul>
+  </header>
+  <!-- menu_bar -->
+  <div class="form-div">
+    <form>
+      <input type="text" name="date" placeholder="Today's Date" />
+      <input type="text" name="title" placeholder="Title" />
+      <textarea name="events" placeholder="What happened?"></textarea>
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+    <h1 style="color: aquamarine">Responses:</h1>
+    <ul id="tl-posts"></ul>
+  </div>
+
+  <script>
+    fetch("/api/timeline_post").then((resp) => {
+      resp.json().then((d) => {
+        const list = document.querySelector("#tl-posts");
+        const posts = d.posts;
+        posts.forEach((e) => {
+          let li = document.createElement("li");
+          li.textContent = `Date: ${e.date}\nTitle: ${e.title}\nEvents:\n ${e.events}`;
+          list.appendChild(li);
+        });
+      });
+    });
+  </script>
+
+  <script>
+    form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const FD = new FormData(e.target);
+      fetch("/api/timeline_post", {
+        method: "POST",
+        body: FD,
+      });
+
+      fetch("/api/timeline_post").then((resp) => {
+      resp.json().then((d) => {
+        const list = document.querySelector("#tl-posts");
+        const posts = d.posts;
+        posts.forEach((e) => {
+          let li = document.createElement("li");
+          li.textContent = `Date: ${e.date}\nTitle: ${e.title}\nEvents:\n ${e.events}`;
+          list.appendChild(li);
+        });
+      });
+    });
+  </script>
 </html>
