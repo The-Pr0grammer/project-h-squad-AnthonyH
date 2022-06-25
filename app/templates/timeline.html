@@ -86,13 +86,14 @@
       });
 
       fetch("/api/timeline_post").then((resp) => {
-      resp.json().then((d) => {
-        const list = document.querySelector("#tl-posts");
-        const posts = d.posts;
-        posts.forEach((e) => {
-          let li = document.createElement("li");
-          li.textContent = `Date: ${e.date}\nTitle: ${e.title}\nEvents:\n ${e.events}`;
-          list.appendChild(li);
+        resp.json().then((d) => {
+          const list = document.querySelector("#tl-posts");
+          const posts = d.posts;
+          posts.forEach((e) => {
+            let li = document.createElement("li");
+            li.textContent = `Date: ${e.date}\nTitle: ${e.title}\nEvents:\n ${e.events}`;
+            list.appendChild(li);
+          });
         });
       });
     });
