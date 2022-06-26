@@ -472,3 +472,8 @@ li a:hover {
   font-weight: 600;
   text-shadow: -1px 0 black, 0 0.25px black;
 }
+
+.twitter-timeline {
+  width: 50%;
+  margin: auto;
+}
