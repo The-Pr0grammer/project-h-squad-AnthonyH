@@ -16,7 +16,7 @@ body {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 101vh;
   margin: 0px;
@@ -88,9 +88,10 @@ li a:hover {
 }
 
 .middle_panel {
-  float: right;
+  position: absolute;
+  /* float: left; */
+  left: 20%;
   flex-direction: column;
-
   height: 100vh;
   width: 25vw;
   max-width: 25vw;
@@ -474,17 +475,28 @@ li a:hover {
 }
 
 .bottom-div {
-  position: absolute;
-  right: 2.5%;
-  bottom: 1%;
+  /* position: absolute; */
+  float: right;
+
+  position: relative;
+  right: 3.5%;
+  /* bottom: 1%; */
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: row;
+  /* background-color: blueviolet; */
+  margin-top: 5%;
+  /* height: 30%; */
 }
 
 .twitter-div {
   width: 50%;
+  height: 100%;
+}
+
+.twitter-timeline {
+  height: 1px;
 }
 
 .git-div {
