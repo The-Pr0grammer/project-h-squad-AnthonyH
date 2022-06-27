@@ -407,6 +407,7 @@ li a:hover {
   align-items: center;
   float: right;
   flex-direction: column;
+  margin-top: 3%;
   /* display: flex; */
 }
 
@@ -475,10 +476,7 @@ li a:hover {
 }
 
 .bottom-div {
-  /* position: absolute; */
   float: right;
-
-  position: relative;
   right: 3.5%;
   /* bottom: 1%; */
   align-items: center;
@@ -486,6 +484,7 @@ li a:hover {
   display: flex;
   flex-direction: row;
   /* background-color: blueviolet; */
+  padding-right: 3.5%;
   margin-top: 5%;
   /* height: 30%; */
 }
@@ -496,7 +495,8 @@ li a:hover {
 }
 
 .twitter-timeline {
-  height: 1px;
+  /* height: 1px; */
+  /* width: 100%; */
 }
 
 .git-div {
