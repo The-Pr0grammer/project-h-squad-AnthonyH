@@ -538,5 +538,5 @@ li a:hover {
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  transform: scale(1.15); /* this is grow amount */
+  transform: scale(1.14); /* this is grow amount */
 }
