@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd ./flask-template
-source env_main/bin/activate
+cd  ~/project-h-squad-AnthonyH
+source python3-virtualenv/bin/activate
 python -m unittest discover -v tests
