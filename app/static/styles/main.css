@@ -227,7 +227,7 @@ li a:hover {
 }
 
 .fa:hover {
-  transform: scale(1.49); /* this is grow amount */
+  transform: scale(1.5); /* this is grow amount */
 }
 
 /*⬇️ change these lines to style focus effect */
